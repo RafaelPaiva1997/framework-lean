@@ -1,0 +1,17 @@
+{
+  "name": "framework-lean",
+  "version": "0.0.1",
+  "description": "Framework Lean",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "start-nodemon": "nodemon index.js"
+  }
+}

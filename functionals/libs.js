@@ -1,9 +1,10 @@
 var fs = require('fs');
+var pathToControllers = "C:/Users/Rafael/work/framework-lean/controllers/"
 
-exports.files = (dir) => {
-    return fs.readdirSync(dir).map(f => f.replace('.js', ''));
+exports.files = () => {
+    return fs.readdirSync(pathToControllers).map(f => f.replace('.js', ''));
 }
 
-exports.handlers = (files, dir) => {
-    return files.reduce((acc, curr) => { acc[curr] = require(dir + curr); return acc; }, {})
+exports.handlers = (files) => {
+    return files.reduce((acc, curr) => { acc[curr] = require(pathToControllers + curr); return acc; }, {})
 }

@@ -4,13 +4,13 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 
-// Modules
-const libs = require('./functionals/libs');
-const files = libs.files();
-const handlers = libs.handlers(files);
-
 // Config
 const CONFIG = require("./config.json");
+
+// Modules
+const handlers = {
+    balanca: require("./controllers/balanca")
+}
 
 // App
 var app = express();

@@ -6,8 +6,8 @@ const cookieParser = require('cookie-parser');
 
 // Modules
 const libs = require('./functionals/libs');
-const files = libs.files(__dirname + '/controllers');
-const handlers = libs.handlers(files, "../controllers/");
+const files = libs.files();
+const handlers = libs.handlers(files);
 
 // Config
 const CONFIG = require("./config.json");
